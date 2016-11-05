@@ -1,10 +1,16 @@
 # seedjs
 
-Yarn, ES6, Gulp, ESLint, TypeScript
+Yarn, ES6, Gulp, ESLint, TypeScript, Webpack, Debian 8
+
+## Behavior
+
+* TypeScript process *.js 
+* Babel process server/shared 
+* Webpack process client
 
 ## usage
 
-./runMe
+. sourceMe && gulp
 
 ## setup
 
