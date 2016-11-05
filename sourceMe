@@ -4,6 +4,4 @@
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 nvm use v7.0.0
 
-#task manager
-gulp
 
