@@ -1,3 +1,7 @@
 # seedjs
 
-Yarn, Gulp, ESLint, TypeESLint
+Yarn, ES6, Gulp, ESLint, TypeScript
+
+**usage** gulp
+
+
