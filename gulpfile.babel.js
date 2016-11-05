@@ -15,6 +15,8 @@ const paths = {
   build1Dir: 'build/step1',
   build2Dir: 'build/step2',
   gulpFile: 'gulpfile.babel.js',
+  serverDistDir:'dist/server',
+  clientDistDir:'dist/client',
 };
 const tsProject = ts.createProject('tsconfig.json');
 
@@ -25,14 +27,13 @@ gulp.task('lint', () =>
   .pipe(eslint.failAfterError())
 );
 
-gulp.task('clean', () => del.sync('build'));
+gulp.task('clean', () => del.sync(['dist','build']));
 
 gulp.task('ts', () =>
   gulp
   .src(paths.allSrcTs, { base: 'src/' })
   .pipe(tsProject())
-  // .pipe(beautify({ indent_size: 8, end_with_newline: true }))
-  .pipe(beautify({ indent_size: 8, end_with_newline: true }))
+  .pipe(beautify())
   .pipe(gulp.dest(paths.build1Dir))
 );
 
@@ -60,7 +61,7 @@ gulp.task('dist', ['build'], () =>
 
 
 gulp.task('main', ['dist'], (callback_) => {
-  exec('node ./dist', (error_, stdout_) => {
+  exec(`node ${paths.serverDistDir}`, (error_, stdout_) => {
     console.log(stdout_);
     return callback_(error_);
   });

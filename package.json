@@ -1,44 +1,48 @@
 {
-    "name": "seedjs",
-    "version": "1.0.0",
-    "description": "seed javascript ",
-    "main": "index.js",
-    "repository": {
-        "url": "https://github.com/manuel-m/seedjs.git",
-        "type": "git"
+  "name": "seedjs",
+  "version": "1.0.0",
+  "description": "seed javascript ",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/manuel-m/seedjs.git",
+    "type": "git"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Manuel MINANA <efficiel.technologie@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-latest": "^6.16.0",
+    "del": "^2.2.2",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-beautify": "^2.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-typescript": "^3.1.2",
+    "js-beautify": "^1.6.4",
+    "typescript": "^2.0.7"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
     },
-    "scripts": {
-        "start": "gulp"
-    },
-    "author": "Manuel MINANA <efficiel.technologie@gmail.com>",
-    "license": "MIT",
-    "devDependencies": {
-        "babel-preset-latest": "^6.16.0",
-        "del": "^2.2.2",
-        "eslint": "^3.9.1",
-        "eslint-config-airbnb": "^12.0.0",
-        "eslint-plugin-import": "^2.1.0",
-        "gulp": "^3.9.1",
-        "gulp-babel": "^6.1.2",
-        "gulp-beautify": "^2.0.0",
-        "gulp-eslint": "^3.0.1",
-        "gulp-typescript": "^3.1.2",
-        "js-beautify": "^1.6.4",
-        "typescript": "^2.0.7"
-    },
-    "babel": {
-        "presets": [
-            "latest"
-        ]
-    },
-    "eslintConfig": {
-        "extends": "airbnb",
-        "plugins": [
-            "import"
-        ]
-    },
-    "dependencies": {
-        "eslint-plugin-jsx-a11y": "^2.2.3",
-        "eslint-plugin-react": "^6.5.0"
-    }
+    "extends": "airbnb",
+    "plugins": [
+      "import"
+    ]
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.5.0"
+  }
 }

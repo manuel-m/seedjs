@@ -2,6 +2,15 @@
 
 Yarn, ES6, Gulp, ESLint, TypeScript
 
-**usage** gulp
+## usage
+
+./runMe
+
+## setup
+
+* Install [nvm](https://github.com/creationix/nvm) 
+* nvm install v7.0.0 
+
+
 
 
